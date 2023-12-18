@@ -1,10 +1,9 @@
 <!DOCTYPE html> 
 <html lang="id">
 <head>
-
-	<title>Pengumuman SNBT SNPMB 2023</title>
+	<title>(Unofficial Site) INFORMASI SNPMB 2023</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -28,239 +27,822 @@
 	<link rel="stylesheet" href="snbt.css" />
 </head>
 <body>
-
-	<div class="container" id="main">	
-		<div class="box">
+	<div class="container">
+	<!--Countdown Utama-->
+		<div class="main-box">
 			<div class="card">
 				<div class="row">
-					<div class="col-12 col-sm-5 d-sm-block">
-						<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+					<div class="col-12 d-sm-block">
+						<div class="text-center">
+							<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+						</div>
 					</div>
 				</div>
 
 				<br>
 
 				<div class="row">
-					<div class="col">
-						<span class="title">PENGUMUMAN HASIL SELEKSI SNBT SNPMB 2023</span>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="row">
-					<div class="col">
-						<p style="color: white;">Masukkan nomor peserta UTBK-SNBT dan tanggal lahir Anda.</p>
-					</div>
-				</div>
-
-				<div class="row mx-auto m-1" id="error" style="display: none;">
 					<div class="col text-center">
-						<div class="error" id="error-msg">
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<div class="form-group">
-							<label for="nopes">Nomor peserta UTBK-SNBT</label>
-							<input type="number" id="nopes" class="form-control no-spinners" tabindex="1" size="12" autocomplete="off">
-							<small id="nopes-help" class="form-text">Masukkan 12-digit nomor peserta UTBK-SNBT Anda.</small>
-						</div>
-						<div class="form-group">
-							<label>Tanggal lahir</label>
-							<div class="form-row">
-								<div class="col">
-									<input type="number" id="day" class="form-control no-spinners" tabindex="2" maxlength="2"  size="2" autocomplete="off" placeholder="dd">
-									<small id="day-help" class="form-text">Tanggal (2 digit): 01-31</small>
-								</div>
-								<div class="col">
-									<input type="number" id="month" class="form-control no-spinners" tabindex="3" maxlength="2"  size="2" autocomplete="off" placeholder="mm">
-									<small id="month-help" class="form-text">Bulan (2 digit): 01-12</small>
-								</div>
-								<div class="col">
-									<input type="number" id="year" class="form-control no-spinners" tabindex="4" maxlength="4"  size="4" autocomplete="off" placeholder="yyyy">
-									<small id="year-help" class="form-text">Tahun (4 digit)</small>
-								</div>
-							</div>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="statement">
-							<label class="form-check-label" for="statement">
-								<p class="small">Dengan ini saya menyatakan bahwa apabila di kemudian hari ditemukan kecurangan yang saya lakukan dalam UTBK-SNBT 2023, maka status penerimaan saya dibatalkan.</p>
-							</label>
-						</div>
-						<button id="search" class="btn btn-primary mt-2" type="submit">Lihat Hasil</button>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container" id="accepted" style="display: none;">
-		
-		<div class="box">
-			<div class="card">
-
-				<div class="row">
-					<div class="col-12 col-sm-5 d-sm-block">
-						<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+						<span class="title">Pembuatan Akun SNPMB</span>
 					</div>
 				</div>
 
 				<br>
 
-				<div class="row">
-					<div class="col-12 text-center">
-						<span class="title">PENGUMUMAN HASIL SELEKSI SNBT SNPMB 2023</span>
+				<div id="countdownc1">
+					<div>
+						<span class="haric1"></span>
+						<div class="smalltext">Hari</div>
+					</div>
+					<div>
+						<span class="jamc1"></span>
+						<div class="smalltext">Jam</div>
+					</div>
+					<div>
+						<span class="menitc1"></span>
+						<div class="smalltext">Menit</div>
+					</div>
+					<div>
+						<span class="detikc1"></span>
+						<div class="smalltext">Detik</div>
 					</div>
 				</div>
-
-				<br>
-
-				<div class="row">
-					<div class="col-12 col-sm-5">
-						<img id="qr-terima" class="img-fluid" src="" alt="qrcode">
-					</div>
-					<div class="col-12 col-sm-7">
-						<div class="row no-gutters mt-3">
-							<div class="col-auto col-sm-3">
-								Nomor peserta
-							</div>
-							<div class="col col-sm-1">
-								:
-							</div>
-							<div class="col-12 col-sm-8" style="font-weight: bold;">
-								<span id="no-peserta-diterima"></span>
-							</div>
-						</div>
-						<div class="row no-gutters">
-							<div class="col-auto col-sm-3">
-								Nama
-							</div>
-							<div class="col col-sm-1">
-								:
-							</div>
-							<div class="col-12 col-sm-8" style="font-weight: bold;">
-								<span id="nama-peserta-diterima"></span>
-							</div>
-						</div>
-						<div class="row no-gutters">
-							<div class="col-auto col-sm-3">
-								Tanggal lahir
-							</div>
-							<div class="col col-sm-1">
-								:
-							</div>
-							<div class="col-12 col-sm-8" style="font-weight: bold;">
-								<span id="tgllahir-peserta-diterima"></span>
-							</div>	
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-12">
-								<span style="font-size: 1.1em;"><strong>Selamat! Anda dinyatakan lulus seleksi SNBT SNPMB 2023</strong> di</span>
-							</div>
-						</div>
-						<br>
-						<div class="row no-gutters">
-							<div class="col-auto col-sm-3">
-								PTN
-							</div>
-							<div class="col col-sm-1">
-								:
-							</div>
-							<div class="col-12 col-sm-8">
-								<span style="font-size: 1.1em; font-weight: bold;"><span id="kode-ptn-terima"></span> - <span id="nama-ptn-terima"></span></span>
-							</div>
-						</div>
-						<div class="row no-gutters">
-							<div class="col-auto col-sm-3">
-								Program Studi
-							</div>
-							<div class="col col-sm-1">
-								:
-							</div>
-							<div class="col-10 col-sm-8">
-								<span style="font-size: 1.1em; font-weight: bold;"><span id="kode-prodi-terima"></span> - <span id="nama-prodi-terima"></span></span>
-							</div>
-						</div>
-						<br>
-						<div class="row" id="bidik-misi" style="display: none;">
-							<div class="col-12">
-								<p style="color: red;">Anda sebagai pendaftar  Program  Indonesia  Pintar  Pendidikan  Tinggi,  calon  pemegang  Kartu Indonesia Pintar Kuliah (KIP Kuliah) harus lolos verifikasi terhadap data akademik dan verifikasi  data  ekonomi  melalui  dokumen  dan/atau  kunjungan  ke  alamat  tinggal Peserta.</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<span>Persyaratan pendaftaran ulang calon mahasiswa baru dapat dilihat di <a id="url-daftar" target="_blank" href="">sini</a>.</span>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-12">
-								<span>Anda dapat mencetak kembali Kartu Tanda Peserta UTBK-SNBT 2023 di <a target="_blank" href="https://portal-snpmb.bppp.kemdikbud.go.id/">sini</a>.</span>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-12">
-								<a class="btn btn-block btn-info btn-wrap-text flash-button" target="_blank" href="https://storage.cloud.google.com/pdf-pengumuman-snbt-2023/pengumuman_snbt_2023_final_20062023.pdf">UNDUH PENGUMUMAN KETUA SNPMB (PDF)</a>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-
 				<div class="void"></div>
+				<p class="smalltextv2">Pembuatan Akun SNPMB dapat dilakukan <strong><a href="https://portal-snpmb.bppp.kemdikbud.go.id/">DISINI</a></strong></p>
+				<div class="void"></div>
+				<div class="text-center" id='jamc1'></div>
+			</div>
+		</div>
+	<!--END Countdown Utama-->
 
-				<div class="row mt-2">
-					<div class="col-12">
-						<a id="accepted-back" class="btn btn-block btn-success" href="">Kembali ke pencarian</a>
+	<!--Group 1-3-->
+		<!--Countdown 1-->
+		<div class="box-container">
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
 					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Puasa Ramadhan 1445 H</span>
+						</div>
+					</div>
+
+					<br>
+
+					<div id="countdownc2">
+						<div>
+							<span class="haric2"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc2"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc2"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc2"></span>
+							<div class="smalltext">Detik</div>
+						</div>
+					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Perkiraan Idul Fitri pada 10-11 April 2024. <strong><a href="https://chat.whatsapp.com/EP7IzfElNOe75xwjaZZxYn">Gabung Grup Jalur Langit</a></strong></p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc2'></div>
+				</div>
+			</div>
+			<!--Countdown 2-->
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Pendaftaran UTBK-SNBT</span>
+						</div>
+					</div>
+
+					<br>
+
+					<div id="countdownc3">
+						<div>
+							<span class="haric3"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc3"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc3"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc3"></span>
+							<div class="smalltext">Detik</div>
+						</div>
+					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Pendaftaran UTBK-SNBT dapat dilakukan <strong><a href="https://pendaftaran-utbksnbt-snpmb.bppp.kemdikbud.go.id/">DISINI (Coming soon)</a></strong></p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc3'></div>
+				</div>
+			</div>
+			<!--Countdown 3-->
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Pelaksanaan UTBK Gelombang 1</span>
+						</div>
+					</div>
+
+					<br>
+
+					<div id="countdownc4">
+						<div>
+							<span class="haric4"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc4"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc4"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc4"></span>
+							<div class="smalltext">Detik</div>
+						</div>
+					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Dilaksanakan di seluruh Pusat UTBK-SNBT di Provinsi/Daerah masing masing, atau dapat klik <strong><a href="https://snpmb.bppp.kemdikbud.go.id/utbk-snbt/pusat-utbk">DISINI</a></strong> untuk mengetahui lokasi lebih lengkap</p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc4'></div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<!--END Group 1-3-->
 
-	<div class="container" id="not-accepted" style="display: none;">
-		<div class="box">
-			<div class="card">
-				<div class="row">
-					<div class="col-12 col-sm-5 d-sm-block">
-						<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+	<!--Group 4-6-->
+		<!--Countdown 4-->
+		<div class="box-container">
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
 					</div>
-				</div>
 
-				<br>
+					<br>
 
-				<div class="row">
-					<div class="col text-center">
-						<span class="title">PENGUMUMAN HASIL SELEKSI SNBT SNPMB 2023</span>
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Pelaksanaan UTBK Gelombang 2</span>
+						</div>
 					</div>
-				</div>
 
-				<div class="card-body">
-					<p class="text-center" style="font-size: 1em;">
-						PESERTA ATAS NAMA <strong><span id="nama-peserta-tidak-terima"></span></strong> DENGAN NOMOR PESERTA <strong><span id="no-peserta-tidak-diterima"></span></strong> DINYATAKAN <strong>TIDAK LULUS</strong> SELEKSI SNBT SNPMB 2023.
-					</p>
-					<p class="text-center" style="font-weight: bold; font-size: 1.5em;">JANGAN PUTUS ASA DAN TETAP SEMANGAT!</p>
-				</div>
+					<br>
 
-				<div class="row">
-					<div class="col-12">
-						<a id="not-accepted-back" class="btn btn-block btn-success" href="">Kembali ke pencarian</a>
+					<div id="countdownc5">
+						<div>
+							<span class="haric5"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc5"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc5"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc5"></span>
+							<div class="smalltext">Detik</div>
+						</div>
 					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Dilaksanakan di seluruh Pusat UTBK-SNBT di Provinsi/Daerah masing masing, atau dapat klik <strong><a href="https://snpmb.bppp.kemdikbud.go.id/utbk-snbt/pusat-utbk">DISINI</a></strong> untuk mengetahui lokasi lebih lengkap</p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc5'></div>
+				</div>
+			</div>
+			<!--Countdown 5-->
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Pengumuman Hasil SNBT</span>
+						</div>
+					</div>
+
+					<br>
+
+					<div id="countdownc6">
+						<div>
+							<span class="haric6"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc6"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc6"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc6"></span>
+							<div class="smalltext">Detik</div>
+						</div>
+					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Pengumuman Hasil SNBT dapat dilihat <strong><a href="https://pengumuman-snbt-snpmb.bppp.kemdikbud.go.id/">DISINI (Coming soon)</a></strong></p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc6'></div>
+				</div>
+			</div>
+			<!--Countdown 6-->
+			<div class="box">
+				<div class="card">
+					<div class="row">
+						<div class="col-12 d-sm-block">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid header-img" alt="Logo SNPMB" />
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col text-center">
+							<span class="title">Masa Unduh Sertifikat UTBK</span>
+						</div>
+					</div>
+
+					<br>
+
+					<div id="countdownc7">
+						<div>
+							<span class="haric7"></span>
+							<div class="smalltext">Hari</div>
+						</div>
+						<div>
+							<span class="jamc7"></span>
+							<div class="smalltext">Jam</div>
+						</div>
+						<div>
+							<span class="menitc7"></span>
+							<div class="smalltext">Menit</div>
+						</div>
+						<div>
+							<span class="detikc7"></span>
+							<div class="smalltext">Detik</div>
+						</div>
+					</div>
+					<div class="void"></div>
+					<p class="smalltextv2">Pengunduhan Sertifikat UTBK dapat dilihat <strong><a href="https://pendaftaran-utbksnbt-snpmb.bppp.kemdikbud.go.id/sertifikat/">DISINI</a></strong></p>
+					<div class="void"></div>
+					<div class="text-center" id='jamc7'></div>
 				</div>
 			</div>
 		</div>
-	</div>
+	<!--END Group 4-6-->
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="snbt-1.0.min.js"></script>
-	<script src="/deadline.js"></script>
+	</div>
+	
+	<!--DATA Countdown 1-->
+  	<script type='text/javascript'>
+		var c1_current_time = new Date();
+		var c1_deadline_time;
+		var c1_status;
+		var c1_dataurl;
+		
+		c1_deadline_time='09 Jan 2024 15:00:00 +0700';
+		c1_deadline_status='belum';
+		c1_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c1_countglobal = 0;
+  		var c1_currenttime;
+    	var c1_deadline;
+		
+		function getTimeRemainingc1(endtime_c1) {
+		  var saikic1 = new Date(Date.parse(c1_current_time)+c1_countglobal);
+		  document.getElementById('jamc1').innerHTML = saikic1.toString() ;
+		  var t = Date.parse(endtime_c1) -saikic1;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c1) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric1');
+		  var hoursSpan = clock.querySelector('.jamc1');
+		  var minutesSpan = clock.querySelector('.menitc1');
+		  var secondsSpan = clock.querySelector('.detikc1');
+
+		  function updateClock() {
+            c1_countglobal=c1_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c1);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c1_deadline = new Date(Date.parse(c1_deadline_time));
+        c1_currentime = new Date(Date.parse(c1_current_time));
+		initializeClock('countdownc1', c1_deadline);
+		
+	</script>
+	<!--END DATA Countdown 1-->
+
+	<!--DATA Countdown 2-->
+	<script type='text/javascript'>
+		var c2_current_time = new Date();
+		var c2_deadline_time;
+		var c2_status;
+		var c2_dataurl;
+		
+		c2_deadline_time='12 Mar 2024 00:00:00 +0700';
+		c2_deadline_status='belum';
+		c2_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c2_countglobal = 0;
+  		var c2_currenttime;
+    	var c2_deadline;
+		
+		function getTimeRemainingc2(endtime_c2) {
+		  var saikic2 = new Date(Date.parse(c2_current_time)+c2_countglobal);
+		  document.getElementById('jamc2').innerHTML = saikic2.toString() ;
+		  var t = Date.parse(endtime_c2) -saikic2;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c2) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric2');
+		  var hoursSpan = clock.querySelector('.jamc2');
+		  var minutesSpan = clock.querySelector('.menitc2');
+		  var secondsSpan = clock.querySelector('.detikc2');
+
+		  function updateClock() {
+            c2_countglobal=c2_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c2);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c2_deadline = new Date(Date.parse(c2_deadline_time));
+        c2_currentime = new Date(Date.parse(c2_current_time));
+		initializeClock('countdownc2', c2_deadline);
+		
+	</script>
+	<!--END DATA Countdown 2-->
+
+	<!--DATA Countdown 3-->
+	<script type='text/javascript'>
+		var c3_current_time = new Date();
+		var c3_deadline_time;
+		var c3_status;
+		var c3_dataurl;
+		
+		c3_deadline_time='21 Mar 2024 15:00:00 +0700';
+		c3_deadline_status='belum';
+		c3_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c3_countglobal = 0;
+  		var c3_currenttime;
+    	var c3_deadline;
+		
+		function getTimeRemainingc3(endtime_c3) {
+		  var saikic3 = new Date(Date.parse(c3_current_time)+c3_countglobal);
+		  document.getElementById('jamc3').innerHTML = saikic3.toString() ;
+		  var t = Date.parse(endtime_c3) -saikic3;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c3) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric3');
+		  var hoursSpan = clock.querySelector('.jamc3');
+		  var minutesSpan = clock.querySelector('.menitc3');
+		  var secondsSpan = clock.querySelector('.detikc3');
+
+		  function updateClock() {
+            c3_countglobal=c3_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c3);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c3_deadline = new Date(Date.parse(c3_deadline_time));
+        c3_currentime = new Date(Date.parse(c3_current_time));
+		initializeClock('countdownc3', c3_deadline);
+		
+	</script>
+	<!--END DATA Countdown 3-->
+
+	<!--DATA Countdown 4-->
+	<script type='text/javascript'>
+		var c4_current_time = new Date();
+		var c4_deadline_time;
+		var c4_status;
+		var c4_dataurl;
+		
+		c4_deadline_time='30 Apr 2024 06:45:00 +0700';
+		c4_deadline_status='belum';
+		c4_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c4_countglobal = 0;
+  		var c4_currenttime;
+    	var c4_deadline;
+		
+		function getTimeRemainingc4(endtime_c4) {
+		  var saikic4 = new Date(Date.parse(c4_current_time)+c4_countglobal);
+		  document.getElementById('jamc4').innerHTML = saikic4.toString() ;
+		  var t = Date.parse(endtime_c4) -saikic4;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c4) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric4');
+		  var hoursSpan = clock.querySelector('.jamc4');
+		  var minutesSpan = clock.querySelector('.menitc4');
+		  var secondsSpan = clock.querySelector('.detikc4');
+
+		  function updateClock() {
+            c4_countglobal=c4_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c4);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c4_deadline = new Date(Date.parse(c4_deadline_time));
+        c4_currentime = new Date(Date.parse(c4_current_time));
+		initializeClock('countdownc4', c4_deadline);
+		
+	</script>
+	<!--END DATA Countdown 4-->
+
+	<!--DATA Countdown 5-->
+	<script type='text/javascript'>
+		var c5_current_time = new Date();
+		var c5_deadline_time;
+		var c5_status;
+		var c5_dataurl;
+		
+		c5_deadline_time='14 May 2024 06:45:00 +0700';
+		c5_deadline_status='belum';
+		c5_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c5_countglobal = 0;
+  		var c5_currenttime;
+    	var c5_deadline;
+		
+		function getTimeRemainingc5(endtime_c5) {
+		  var saikic5 = new Date(Date.parse(c5_current_time)+c5_countglobal);
+		  document.getElementById('jamc5').innerHTML = saikic5.toString() ;
+		  var t = Date.parse(endtime_c5) -saikic5;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c5) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric5');
+		  var hoursSpan = clock.querySelector('.jamc5');
+		  var minutesSpan = clock.querySelector('.menitc5');
+		  var secondsSpan = clock.querySelector('.detikc5');
+
+		  function updateClock() {
+            c5_countglobal=c5_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c5);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c5_deadline = new Date(Date.parse(c5_deadline_time));
+        c5_currentime = new Date(Date.parse(c5_current_time));
+		initializeClock('countdownc5', c5_deadline);
+		
+	</script>
+	<!--END DATA Countdown 5-->
+
+	<!--DATA Countdown 6-->
+	<script type='text/javascript'>
+		var c6_current_time = new Date();
+		var c6_deadline_time;
+		var c6_status;
+		var c6_dataurl;
+		
+		c6_deadline_time='13 Jun 2024 15:00:00 +0700';
+		c6_deadline_status='belum';
+		c6_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c6_countglobal = 0;
+  		var c6_currenttime;
+    	var c6_deadline;
+		
+		function getTimeRemainingc6(endtime_c6) {
+		  var saikic6 = new Date(Date.parse(c6_current_time)+c6_countglobal);
+		  document.getElementById('jamc6').innerHTML = saikic6.toString() ;
+		  var t = Date.parse(endtime_c6) -saikic6;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c6) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric6');
+		  var hoursSpan = clock.querySelector('.jamc6');
+		  var minutesSpan = clock.querySelector('.menitc6');
+		  var secondsSpan = clock.querySelector('.detikc6');
+
+		  function updateClock() {
+            c6_countglobal=c6_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c6);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c6_deadline = new Date(Date.parse(c6_deadline_time));
+        c6_currentime = new Date(Date.parse(c6_current_time));
+		initializeClock('countdownc6', c6_deadline);
+		
+	</script>
+	<!--END DATA Countdown 6-->
+
+	<!--DATA Countdown 7-->
+	<script type='text/javascript'>
+		var c7_current_time = new Date();
+		var c7_deadline_time;
+		var c7_status;
+		var c7_dataurl;
+		
+		c7_deadline_time='17 Jun 2024 15:00:00 +0700';
+		c7_deadline_status='belum';
+		c7_dataurl='https://storage.googleapis.com/pengumuman-snbt-2023-prod-uj5f8';
+	</script>
+	<script type="text/javascript">
+		var c7_countglobal = 0;
+  		var c7_currenttime;
+    	var c7_deadline;
+		
+		function getTimeRemainingc7(endtime_c7) {
+		  var saikic7 = new Date(Date.parse(c7_current_time)+c7_countglobal);
+		  document.getElementById('jamc7').innerHTML = saikic7.toString() ;
+		  var t = Date.parse(endtime_c7) -saikic7;
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+
+		function initializeClock(id, endtime_c7) {
+		  var clock = document.getElementById(id);
+		  var daysSpan = clock.querySelector('.haric7');
+		  var hoursSpan = clock.querySelector('.jamc7');
+		  var minutesSpan = clock.querySelector('.menitc7');
+		  var secondsSpan = clock.querySelector('.detikc7');
+
+		  function updateClock() {
+            c7_countglobal=c7_countglobal+1000;
+		    var t = getTimeRemainingc1(endtime_c7);
+
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		    if (t.total <= 0) {
+		      window.location.href='/index.html';
+		      clearInterval(timeinterval);
+		    }
+		  }
+
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+
+		c7_deadline = new Date(Date.parse(c7_deadline_time));
+        c7_currentime = new Date(Date.parse(c7_current_time));
+		initializeClock('countdownc7', c7_deadline);
+		
+	</script>
+	<!--END DATA Countdown 7-->
+
+	<!------ sini lih footernya, jeroane div bisa diubah2------>
+	<div style="display:flex; flex-direction:column; border-top: 1px solid blue; background : #2e5c98; color : white; ">
+		<div style="order:1; text-align:center; margin-top:8px" >
+			<b style='color:white !important;'>(Unofficial Site) Seleksi Nasional Penerimaan Mahasiswa Baru</b>
+		</div>
+		<div style="order:2; font-size:12px">
+			<p align="center">Situs ini dibuat oleh perseorangan dan bukan resmi dari SNPMB!<br>
+				Dibuat hanya untuk membantu memahami timeline UTBK-SNBT<br>
+				Gabung Grup WhatsApp AMBIS UTBK-SNBT <a href="https://chat.whatsapp.com/HAPLKENDxa56SZ9vB52YH9" style="color:#36d1dc" target="_blank">DISINI</a> | Gabung Channel WhatsApp <a href="https://whatsapp.com/channel/0029VaBZFUc7Noa2fyl2Fp2H" style="color:#36d1dc" target="_blank">DISINI</a><br>
+				Sampaikan pertanyaan, kritik dan saran ke <a href="https://wa.me/6289646548836" style="color:#36d1dc" target="_blank">089646548836</a> Email: <a href="mailto:leburdeningpangastuti@gmail.com" style="color:#36d1dc" target="_blank">leburdeningpangastuti@gmail.com</a><br>
+			<a href="privacy-policy.html" style="color:white" target="_blank">Kebijakan Privasi</a></p>
+			
+			<p align="center">
+				<a href="https://www.facebook.com/snpmb.bppp" target="_blank"><img alt="" src="/images/logofb-35694685.png" /></a>
+				&nbsp;<a href="https://www.instagram.com/_snpmbbppp/" target="_blank"><img alt="" src="/images/logoig-3de1cc15.png" /> </a>
+				&nbsp;<a href="https://twitter.com/snpmb_bppp" target="_blank"><img alt="" src="/images/logox-89e1a5af.png" />  </a>
+				&nbsp;<a href="https://www.youtube.com/@snpmbbppp" target="_blank"><img alt="" src="/images/logoyt-fc68f681.png" /> </a>
+				&nbsp;<a href="https://www.tiktok.com/@snpmb_bppp" target="_blank"><img alt="" src="/images/logott-1b840399.png" /> 
+				</a>
+			</p>
+			<div class="row"><a name="a13-1"></a></div>
+		</div>
+	</div>
+	<!------------------------>
 
 	<noscript>
 		<meta http-equiv="refresh" content="0; url=/nojs.html" />
