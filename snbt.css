@@ -71,6 +71,21 @@ body {
 	display: inline-block;
 }
 
+#countdownc1b {
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 40px;
+}
+
+#countdownc1b > div {
+	padding: 15px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
 #countdownc2 {
 	font-family: sans-serif;
 	color: #fff;
